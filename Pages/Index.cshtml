@@ -1,0 +1,14 @@
+﻿@page
+@using Lab02.Model.NW
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var categories = ViewData["Categories"] as List<Category>;
+}
+
+<div class="text-center">
+    @foreach (var item in categories!)
+    {
+        <p>@item.CategoryName</p>
+    }
+</div>
